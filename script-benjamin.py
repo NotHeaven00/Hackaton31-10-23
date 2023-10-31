@@ -19,3 +19,9 @@ plt.ylabel('Nombre de découvertes')
 plt.plot(X,Ylisse.values,color='red')
 plt.xlabel('Année')
 plt.ylabel('Nombre de découvertes (courbe lissée)')
+
+planetes_groups2=planetes.groupby(by='disc_facility')
+
+labels=planetes_groups2.size().keys()
+données=planetes_groups2.size().values
+plt.pie(données,labels=labels)
