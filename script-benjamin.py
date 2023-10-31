@@ -7,12 +7,15 @@ planetes.drop_duplicates(inplace=True)
 
 planetes_groups = planetes.groupby(by='disc_year')
 
-planetes_groups.size()
-
 X=planetes_groups.size().keys()
 
-Y=planetes_groups.size().values
+Y=planetes_groups.size()
+Ylisse=Y.rolling(window=3,center=True).mean()
 
-plt.plot(X,Y)
+plt.plot(X,Y.values,color='green')
 plt.xlabel('Année')
 plt.ylabel('Nombre de découvertes')
+
+plt.plot(X,Ylisse.values,color='red')
+plt.xlabel('Année')
+plt.ylabel('Nombre de découvertes (courbe lissée)')
