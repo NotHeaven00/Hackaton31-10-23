@@ -20,6 +20,7 @@
 # ---
 
 # %% [markdown]
+<<<<<<< HEAD
 # Notebook de Thomas
 
 # %%
@@ -102,3 +103,12 @@ plt.xlabel('Masse solaire')
 plt.yscale('log')
 
 plt.title('Température étoile fonction de sa masse (en Soleils)')
+=======
+# # un notebook vierge
+#
+# sauvé en Python
+
+# %%
+def foo():
+    print("hello world")
+>>>>>>> 3edc6c6792bb44eb268e12bb4499d94ad7990e80
